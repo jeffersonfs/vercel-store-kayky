@@ -5,6 +5,9 @@ datasource db {
     shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
+generator client {
+    provider = "prisma-client-js"
+}
 
 model Jogo {
     id String @id @default(cuid())
